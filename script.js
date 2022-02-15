@@ -30,7 +30,7 @@ const pokemonSearch = async () => {
     
     document.getElementById('search-pokemon').innerHTML =  `
     <div class='search-card'>
-        <img src= ${pokemon.sprites.front_default} alt='pokemon_img' class='search_img' id= '${pokemon.name}'>
+        <img src= ${pokemon.sprites.front_default} alt='pokemon_img' class='search_img' id= '${pokemon.id}'>
         <div class='card_data'>
           <p>ID: ${pokemon.id}</p>
           <p class='poke_name'>NAME: ${pokemon.name.toUpperCase()}</p>

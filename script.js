@@ -8,8 +8,6 @@ const getPokemon = async id => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const res = await fetch(url);
     const pokemon = await res.json();
-    //arr.push(pokemon);
-    //console.log(arr);
     createPokemonCard(pokemon);
     
 }
@@ -20,14 +18,7 @@ const fetchPokemons = async (pokemon_number) => {
         await getPokemon(i); 
     }
 }
-/*const clgPoke= async (id)=>{
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const res = await fetch(url);
-    const pokemon = await res.json();
-    console.log(pokemon);
-    console.log(pokemon.name)
-}
-clgPoke('6');*/
+
 
 const pokemonSearch = async () => {
     let a = document.getElementById('input_id').value.toLowerCase();
@@ -51,62 +42,8 @@ const pokemonSearch = async () => {
     </div>`
      
     pokeColors(pokemon);
-    /*let colores = document.getElementById('foto');
-    console.log(pokemon.types[0].type.name);
-     if (pokemon.types[0].type.name ==='electric'){
-        colores.style.backgroundColor = 'yellow';
-     }
-     else if (pokemon.types[0].type.name ==='fire'){
-        colores.style.backgroundColor = 'orange';
-     }
-     else if (pokemon.types[0].type.name ==='water'){
-        colores.style.backgroundColor = 'lightblue';
-     }
-     else if (pokemon.types[0].type.name ==='grass'){
-        colores.style.backgroundColor = 'green';
-     }
-     else if (pokemon.types[0].type.name ==='bug'){
-        colores.style.backgroundColor = 'brown';
-     }
-     else if (pokemon.types[0].type.name ==='poison'){
-        colores.style.backgroundColor = 'purple';
-     }
-     else if (pokemon.types[0].type.name ==='ground'){
-        colores.style.backgroundColor = 'brown';
-     }
-     else if (pokemon.types[0].type.name ==='fairy'){
-        colores.style.backgroundColor = 'pink';
-     }
-     else if (pokemon.types[0].type.name ==='fighting'){
-        colores.style.backgroundColor = 'grey';
-     }
-     else if (pokemon.types[0].type.name ==='psychic'){
-        colores.style.backgroundColor = 'yellow';
-     }
-     else if (pokemon.types[0].type.name ==='rock'){
-        colores.style.backgroundColor = 'grey';
-     }
-     else if (pokemon.types[0].type.name ==='ghost'){
-        colores.style.backgroundColor = 'purple';
-     }
-     else if (pokemon.types[0].type.name ==='ice'){
-        colores.style.backgroundColor = 'yellow';
-     }
-     else if (pokemon.types[0].type.name ==='dragon'){
-        colores.style.backgroundColor = 'blue';
-     }*/
-    /*const pokemonEl = document.createElement('div');
-    pokemonEl.classList.add('add')
-
-    const pokeInnerHTML = `
-    <div>
-        <img src= ${pokemon.sprites.front_default} alt='pokemon_img'>
-        <h4>${pokemon.id}</h4>
-        <h4>${pokemon.name}</h4>
-    </div>`;
-    pokemonEl.innerHTML = pokeInnerHTML;
-    poke_container.appendChild(pokemonEl);
-    */
+    
+    
     
     
 }
@@ -185,44 +122,18 @@ const  createPokemonCard = (pokemon) => {
    
     
     pokeCard = document.getElementById(`${pokemon.name}`);
-    //console.log(document.getElementsByTagName('select').value);
-    //let quantity =  document.querySelector('#quantity').value;
     
     
-      //pokeCard.style.display = 'none';
-      /*document.getElementById('btn-filter').onclick = () =>{
-        number = getNumber.value;
-        console.log(number);
-        number
-      }*/
-      /*for (let i=0;i<pokemon_number;i++){
-         pokemonEl.newArr[i] = pokeInnerHTML; 
-         poke_container.appendChild(pokemonEl)
-      };*/
-      //let getNumber = document.getElementById('quantity');
-      //let number = getNumber.value;
+    
       
-      /*document.getElementById('btn-filter').onclick = () =>{
-         /*if (pokemon.id <= number){
-            pokeCard.style.display = 'none';
-            //document.getElementById(`${pokemon.name}`).remove();
-                 
-            console.log(number);
-            
-         }
-         //quantities(pokemonEl, pokemon);
-         console.log(number);
-         
-         if (number > '300'){
-            alert('boca me chupa la pija')
-            document.getElementById(`${pokemon.id}`).style.display = 'none';
-         }
-      }*/
+      
+      
+      
+      
 
       
       let pokemonFilter = ()=>{
          let pokeType = pokemon.types[0].type.name;
-         console.log(pokeType);
          let pokemons = document.getElementById(`${pokemon.name}`)
          let selection = document.getElementById('types');
          if (pokeType != selection.value ) {

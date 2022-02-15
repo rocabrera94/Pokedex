@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    box-sizing: content-box;
+    margin: 0;
+}
+
+body{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1{
+    margin: 75px 0 75px 0;
+}
+
+.poke-container{
+    display: grid;
+    grid-template-columns:120px 120px 120px 120px 120px;  
+    column-gap: 120px;
+    row-gap: 35px; 
+    margin: 35px 35px 35px 0px;
+}
+
+.poke-hidden{
+    display: none;
+}
+
+.card{
+    border: 1px solid lightskyblue;
+    padding: 5px;
+    border-radius: 7%;
+    background-color: lightcyan;
+    width: 200px;
+    text-transform: capitalize;
+    box-shadow: 11px 8px 15px 5px rgba(0,0,0,0.23);
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.search-card{
+    border: 1px solid lightskyblue;
+    border-radius: 7%;
+    background-color: lightcyan;
+    display: flex;
+    height: 190px;
+    margin: 25px 0 155px 0;
+    width: 350px;
+    box-shadow: 11px 8px 15px 5px rgba(0,0,0,0.23);
+}
+
+.searcher{
+    width: 500px; 
+    margin-bottom: 50px;
+    height: 25px;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    outline: lightslategray;
+}
+
+.searcher:hover, .searcher:focus {
+    border: 1.5px solid lightskyblue;
+    background-color: rgb(184, 204, 233);
+  }
+
+.btn{
+    height: 28px;
+    width: 70px;
+    background-color: rgb(31, 146, 218);
+    color:  white;
+    border: none;
+    border-radius: 7%;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search_img{
+    border: 1px dashed  rgb(114, 111, 111);
+    border-radius: 5%;
+    height: 125px;
+    width: 150px;
+    background-color: rgb(248, 245, 245);
+    margin: 15px 15px 10px 12px;
+}
+
+.card_data{
+font-size: 10px;
+font-weight: bold;
+margin: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+}
+
+.card_text{
+    margin: 10px;
+    
+}
+
+.text{
+    margin-top:15px;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 40px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: rgb(40, 100, 212); 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(57, 82, 129); 
+  }
+
+
+  .type-filter{
+      height:28px;
+      margin-bottom: 50px;
+  }
+
+footer{
+    margin: 45px 0 0 0;
+    height: 50px;
+    border: 1px solid lightcyan;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    background-color:lightcyan;
+    color: black;
+    align-items: center;
+}
+
+@media (max-width: 700px) { 
+    .poke-container{
+        display: grid;
+        grid-template-columns: 120px 120px;
+        column-gap: 100px;
+    }
+
+    .searcher{
+        width: 300px;
+        margin-left: 35px;
+    }
+
+    .filters{
+        margin-left: 35px;
+    }
+ }
+
+
+ @media (max-width: 375px) {
+     .poke-container{
+         display: grid;
+         grid-template-columns: 120px;
+         margin-right: 75px;
+     }
+
+     .searcher{
+         width: 150px;
+         margin-left: 45px;
+     }
+
+     .search-card{
+         width: 300px;
+     }
+
+     .type-filter{
+         margin-left: 10px;
+     }
+  }

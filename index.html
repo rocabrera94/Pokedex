@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="https://www.geekno.com/wp-content/uploads/2016/08/Favicon-pokeball.ico">
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <form >
+        <input type='text' id='input_id' value='Pikachu' class='searcher'>
+        <button onclick='pokemonSearch()' type='button' class='btn'>Search</button>
+        <div class="filters">
+          <select  id='types' class="type-filter">
+            <option value='fire' >fire</option>
+            <option value='water' >water</option>
+            <option value='grass' selected>grass</option>
+            <option value='normal' >normal</option>
+            <option value='psychic' >psychic</option>
+            <option value='ground' >ground</option>
+            <option value='poison' >poison</option>
+            <option value='electric' >electric</option>
+            <option value='rock' >rock</option>
+            <option value='bug' >bug</option>
+            <option value='fighting' >fighting</option>
+            <option value='ghost' >ghost</option>
+            <option value='ice' >ice</option>
+            <option value='dragon' >dragon</option>
+            <option value='fairy' >fairy</option>
+            <option value='steel' >steel</option>
+            <option value='dark' >dark</option>
+          </select>
+          <button type='button' id='btn-filter' class="btn">filter</button>
+        </div>
+    </form>
+    <div id='search-pokemon' ></div>
+    <div id='poke_container' class='poke-container'></div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" >Back to Top</button>
+    <footer>Hecho por Rodrigo Cabrera</footer>
+    <script src='script.js'></script>
+</body>
+</html>
